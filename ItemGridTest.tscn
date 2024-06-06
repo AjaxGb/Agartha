@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=3 uid="uid://hg4ao8bj05os"]
+
+[ext_resource type="Texture2D" uid="uid://bvbyg14304htb" path="res://Sprites/TestGun.png" id="1_xtk6n"]
+
+[sub_resource type="ConcavePolygonShape2D" id="ConcavePolygonShape2D_f5we1"]
+segments = PackedVector2Array(0.64, 0.59, 25.85, 0.63, 25.85, 0.63, 27.37, 2.15, 0, 0, 0, 0)
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_xtk6n")
+centered = false
+
+[node name="Area2D" type="Area2D" parent="Sprite2D"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Sprite2D/Area2D"]
+scale = Vector2(9.315, 9.315)
+shape = SubResource("ConcavePolygonShape2D_f5we1")
